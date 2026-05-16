@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281056883961",
+    "project_id": "negilu-b9b3c",
+    "storage_bucket": "negilu-b9b3c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281056883961:android:c13d2021eb91d2e529de28",
+        "android_client_info": {
+          "package_name": "com.negilu.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB8bF3YrvvKblYdwd5XYzs5cTdhObYelc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
