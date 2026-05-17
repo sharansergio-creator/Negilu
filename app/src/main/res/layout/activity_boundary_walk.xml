@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#0d1a12">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Farm Boundary Walk"
+        android:textSize="22sp"
+        android:textColor="#4caf7d"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Walk to each corner of your farm and tap Add Point"
+        android:textSize="13sp"
+        android:textColor="#6a9478"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Press Start Walk to begin"
+        android:textColor="#d4e8da"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#111e16"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/pointCountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Points captured: 0"
+        android:textColor="#4caf7d"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Walk"
+        android:backgroundTint="#2d7a4f"
+        android:textColor="#ffffff"
+        android:padding="14dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/addPointButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Point Here"
+        android:backgroundTint="#1e5c3a"
+        android:textColor="#ffffff"
+        android:padding="14dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finish and Save Boundary"
+        android:backgroundTint="#c8a84b"
+        android:textColor="#000000"
+        android:padding="14dp"/>
+
+</LinearLayout>

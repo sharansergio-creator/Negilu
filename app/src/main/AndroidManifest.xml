@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Negilu">
+        <meta-data
+            android:name="com.mapbox.token"
+            android:value="${MAPBOX_ACCESS_TOKEN}"/>
 
         <activity
             android:name=".LoginActivity"
@@ -30,6 +35,14 @@
 
         <activity
             android:name=".FarmSetupActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".BoundaryWalkActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".FarmMapActivity"
             android:exported="false"/>
 
     </application>

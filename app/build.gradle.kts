@@ -6,6 +6,9 @@ plugins {
 android {
     namespace = "com.negilu.app"
     compileSdk = 36
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId = "com.negilu.app"
@@ -15,6 +18,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders["MAPBOX_ACCESS_TOKEN"] = providers.gradleProperty("MAPBOX_ACCESS_TOKEN").orElse("").get()
+        buildConfigField("String", "MAPBOX_TOKEN", "\"${providers.gradleProperty("MAPBOX_ACCESS_TOKEN").orElse("").get()}\"")
     }
 
     buildTypes {
@@ -45,4 +50,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Location
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    // Mapbox
+    implementation("com.mapbox.maps:android:11.9.0")
 }
