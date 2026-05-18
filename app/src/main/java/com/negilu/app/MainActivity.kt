@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val welcomeText = findViewById<TextView>(R.id.welcomeText)
         val viewMapButton = findViewById<Button>(R.id.viewMapButton)
         val boundaryButton = findViewById<Button>(R.id.boundaryWalkButton)
+        val weatherButton = findViewById<Button>(R.id.weatherButton)
 
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
         val db = FirebaseFirestore.getInstance()
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         boundaryButton.setOnClickListener {
             startActivity(Intent(this, BoundaryWalkActivity::class.java))
+        }
+
+        weatherButton.setOnClickListener {
+            startActivity(Intent(this, WeatherActivity::class.java))
         }
     }
 }

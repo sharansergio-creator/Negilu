@@ -6,6 +6,7 @@ plugins {
 android {
     namespace = "com.negilu.app"
     compileSdk = 36
+
     buildFeatures {
         buildConfig = true
     }
@@ -20,6 +21,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders["MAPBOX_ACCESS_TOKEN"] = providers.gradleProperty("MAPBOX_ACCESS_TOKEN").orElse("").get()
         buildConfigField("String", "MAPBOX_TOKEN", "\"${providers.gradleProperty("MAPBOX_ACCESS_TOKEN").orElse("").get()}\"")
+        buildConfigField("String", "OPENWEATHER_API_KEY", "\"${providers.gradleProperty("OPENWEATHER_API_KEY").orElse("").get()}\"")
     }
 
     buildTypes {
@@ -31,6 +33,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -56,4 +59,7 @@ dependencies {
 
     // Mapbox
     implementation("com.mapbox.maps:android:11.9.0")
+
+    // Networking
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }

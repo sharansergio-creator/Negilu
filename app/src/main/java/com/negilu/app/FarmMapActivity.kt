@@ -24,7 +24,7 @@ class FarmMapActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MapboxOptions.accessToken = BuildConfig.MAPBOX_TOKEN
+        MapboxOptions.accessToken = getString(R.string.mapbox_access_token)
         setContentView(R.layout.activity_farm_map)
 
         mapView = findViewById(R.id.mapView)

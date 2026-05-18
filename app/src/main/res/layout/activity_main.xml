@@ -38,6 +38,16 @@
         android:layout_marginBottom="12dp"/>
 
     <Button
+        android:id="@+id/weatherButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Farm Weather"
+        android:backgroundTint="#2196b0"
+        android:textColor="#ffffff"
+        android:padding="14dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
         android:id="@+id/boundaryWalkButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
